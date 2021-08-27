@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">News App</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="search">Search</string>
+    <string name="some_title">4 Growth Stocks With 116% to 247% Upside, According to Wall Street</string>
+    <string name="some_source">The New Yorker</string>
+    <string name="some_description">What you need to know\n\n\nA new update for the Tesla app adds support for Home screen widgets for the first time.\nUsers can see when their car is charging, whether Sentry mode is enabled, and more.\nOther improvements include a refreshed interface, easier access…</string>
+    <string name="some_author_name">Oliver Haslam</string>
+    <string name="some_content">Tesla has quietly updated its iPhone app to add a slew of new features not least new iOS 14 Home screen widgets in two different sizes.r\nReleased as version 4.0.0, the new Tesla app can be downloaded… [+1659 chars]</string>
+    <string name="some_date">2021-08-26T09:27:03Z</string>
+    <string name="nav_to_source">Navigate To Source</string>
+    <string name="api_key">647104e4dc5f4bebb06c54348f87c801</string>
+    <string name="article_img">Article Image</string>
+    <string name="status_img">Status Image</string>
+</resources>

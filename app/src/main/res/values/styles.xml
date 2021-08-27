@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="Widget.Theme.NewsApp.Fullscreen" parent="Widget.AppCompat.Light.ActionBar">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="Widget.Theme.NewsApp.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/white</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+</resources>

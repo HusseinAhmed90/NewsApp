@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.example.newsapp.core.data.NewsModel" />
+        <variable
+            name="detailsFragment"
+            type="com.example.newsapp.views.details.DetailsFragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".views.details.DetailsFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/detail_image"
+                android:layout_width="match_parent"
+                android:layout_height="296dp"
+                android:contentDescription="@string/article_img"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_place_holder"
+                app:imageUrl="@{item.urlToImage}"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/detail_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="@{item.title}"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/detail_image"
+                tools:text="@string/some_title" />
+
+            <TextView
+                android:id="@+id/detail_description_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="7"
+                android:text="@{item.description}"
+                android:textColor="@color/grey_search_color"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/detail_title_tv"
+                tools:text="@string/some_description" />
+
+            <TextView
+                android:id="@+id/detail_author_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{item.author}"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/detail_description_tv"
+                tools:text="@string/some_author_name" />
+
+            <TextView
+                android:id="@+id/detail_source_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{item.source.name}"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/detail_author_tv"
+                tools:text="@string/some_source" />
+
+            <TextView
+                android:id="@+id/detail_content_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="7"
+                android:text="@{item.content}"
+                android:textColor="@color/grey_search_color"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/detail_source_tv"
+                tools:text="@string/some_content" />
+
+            <TextView
+                android:id="@+id/detail_date_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{item.publishedAt}"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/detail_content_tv"
+                tools:text="@string/some_date" />
+
+            <Button
+                android:id="@+id/detail_nav_source_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/nav_to_source"
+                android:onClick="@{ (view) -> detailsFragment.openUrl(view, item.url)}"
+                app:layout_constraintTop_toBottomOf="@id/detail_date_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>
