@@ -2,6 +2,8 @@
 
 ##### The application shows a list fetched from API service and present the selected data in another detailed screen
 
+<img src="https://github.com/HusseinAhmed90/NewsApp/blob/docs/01.jpg" width="30%" height="30%">     <img src="https://github.com/HusseinAhmed90/NewsApp/blob/docs/02.jpg" width="30%" height="30%">
+
 #### This project created using MVVM design pattern with clean architecture with applying the SOLID priciples
 
 #### Some of the used libraries in this project:
